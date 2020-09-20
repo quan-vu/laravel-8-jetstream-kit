@@ -1,73 +1,140 @@
-# This file is a template, and might need editing before it works on your project.
-# Official framework image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/php
-image: php:latest
+stages:
+  - preparation
+  - building
+  - testing
+  - security
 
-# Pick zero or more services to be used on all builds.
-# Only needed when using a docker container to run your tests in.
-# Check out: http://docs.gitlab.com/ce/ci/docker/using_docker_images.html#what-is-a-service
-services:
-  - mysql:latest
+image: edbizarro/gitlab-ci-pipeline-php:7.2
 
+# Variables
 variables:
-  MYSQL_DATABASE: project_name
-  MYSQL_ROOT_PASSWORD: secret
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_USER: root
+  MYSQL_PASSWORD: Abc!23456
+  MYSQL_DATABASE: core-lavarel
+  DB_HOST: localhost
 
-# This folder is cached between builds
-# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
-  paths:
-    - vendor/
-    - node_modules/
+  key: "$CI_JOB_NAME-$CI_COMMIT_REF_SLUG"
 
-# This is a basic example for a gem or script which doesn't use
-# services such as redis or postgres
-before_script:
-  # Update packages
-  - apt-get update -yqq
-  # Prep for Node
-  - apt-get install gnupg -yqq
-  # Upgrade to Node 8
-  - curl -sL https://deb.nodesource.com/setup_8.x | bash -
-  # Install dependencies
-  - apt-get install git nodejs libcurl4-gnutls-dev libicu-dev libmcrypt-dev libvpx-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev libxml2-dev libexpat1-dev libbz2-dev libgmp3-dev libldap2-dev unixodbc-dev libpq-dev libsqlite3-dev libaspell-dev libsnmp-dev libpcre3-dev libtidy-dev -yqq
-  # Install php extensions
-  - docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2 opcache
-  # Install & enable Xdebug for code coverage reports
-  - pecl install xdebug
-  - docker-php-ext-enable xdebug
-  # Install Composer and project dependencies.
-  - curl -sS https://getcomposer.org/installer | php
-  - php composer.phar install
-  # Install Node dependencies.
-  # comment this out if you don't have a node dependency
-  - npm install
-  # Copy over testing configuration.
-  # Don't forget to set the database config in .env.testing correctly
-  # DB_HOST=mysql
-  # DB_DATABASE=project_name
-  # DB_USERNAME=root
-  # DB_PASSWORD=secret
-  - cp .env.testing .env
-  # Run npm build
-  # comment this out if you don't have a frontend build
-  # you can change this to to your frontend building script like
-  # npm run build
-  - npm run dev
-  # Generate an application key. Re-cache.
-  - php artisan key:generate
-  - php artisan config:cache
-  # Run database migrations.
-  - php artisan migrate
-  # Run database seed
-  - php artisan db:seed
-
-test:
+composer:
+  stage: preparation
   script:
-    # run laravel tests
-    - php vendor/bin/phpunit --coverage-text --colors=never
-    # run frontend tests
-    # if you have any task for testing frontend
-    # set it in your package.json script
-    # comment this out if you don't have a frontend test
-    - npm test
+    - php -v
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+    - cp .env.example .env
+    - php artisan key:generate
+  artifacts:
+    paths:
+      - vendor/
+      - .env
+    expire_in: 1 days
+    when: always
+  cache:
+    paths:
+      - vendor/
+
+yarn:
+  stage: preparation
+  script:
+    - yarn --version
+    - yarn install --pure-lockfile
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1 days
+    when: always
+  cache:
+    paths:
+      - node_modules/
+
+build-assets:
+  stage: building
+  # Download the artifacts for these jobs
+  dependencies:
+    - composer
+    - yarn
+  script:
+    - yarn --version
+    - yarn run production --progress false
+  artifacts:
+    paths:
+      - public/css/
+      - public/js/
+      - public/fonts/
+      - public/mix-manifest.json
+    expire_in: 1 days
+    when: always
+
+db-seeding:
+  stage: building
+  services:
+    - name: mysql:8.0
+      command: ["--default-authentication-plugin=mysql_native_password"]
+  # Download the artifacts for these jobs
+  dependencies:
+    - composer
+    - yarn
+  script:
+    - mysql --version
+    - php artisan migrate:fresh --seed
+    - mysqldump --host="${DB_HOST}" --user="${MYSQL_USER}" --password="${MYSQL_PASSWORD}" "${MYSQL_DATABASE}" > db.sql
+  artifacts:
+    paths:
+      - storage/logs # for debugging
+      - db.sql
+    expire_in: 1 days
+    when: always
+
+phpunit:
+  stage: testing
+  services:
+    - name: mysql:8.0
+      command: ["--default-authentication-plugin=mysql_native_password"]
+  # Download the artifacts for these jobs
+  dependencies:
+    - build-assets
+    - composer
+    - db-seeding
+  script:
+    - php -v
+    - sudo cp /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.bak
+    - echo "" | sudo tee /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    - mysql --host="${DB_HOST}" --user="${MYSQL_USER}" --password="${MYSQL_PASSWORD}" "${MYSQL_DATABASE}" < db.sql
+    - ./vendor/phpunit/phpunit/phpunit --version
+    - php -d short_open_tag=off ./vendor/phpunit/phpunit/phpunit -v --colors=never --stderr
+    - sudo cp /usr/local/etc/php/conf.d/docker-php-ext-xdebug.bak /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+  artifacts:
+    paths:
+      - ./storage/logs # for debugging
+    expire_in: 1 days
+    when: on_failure
+
+codestyle:
+  stage: testing
+  image: lorisleiva/laravel-docker
+  script:
+    - phpcs --extensions=php app
+  dependencies: []
+
+phpcpd:
+  stage: testing
+  script:
+    - test -f phpcpd.phar || curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar
+    - php phpcpd.phar app/ --min-lines=50
+  dependencies: []
+  cache:
+    paths:
+      - phpcpd.phar
+
+sensiolabs:
+  stage: security
+  script:
+    - test -d security-checker || git clone https://github.com/sensiolabs/security-checker.git
+    - cd security-checker
+    - composer install
+    - php security-checker security:check ../composer.lock
+  dependencies: []
+  cache:
+    paths:
+      - security-checker/
