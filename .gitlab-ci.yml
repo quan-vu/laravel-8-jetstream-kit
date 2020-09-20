@@ -78,7 +78,7 @@ db-seeding:
   script:
     - mysql --version
     - php artisan migrate:fresh --seed
-    - mysqldump --host="${DB_HOST}" --user="${MYSQL_USER}" --password="${MYSQL_PASSWORD}" "${MYSQL_DATABASE}" > db.sql
+    - mysqldump --host="${DB_HOST}" --user="${MYSQL_USER}" --password="${MYSQL_PASSWORD}" "${MYSQL_DATABASE}" < db.sql
   artifacts:
     paths:
       - storage/logs # for debugging
