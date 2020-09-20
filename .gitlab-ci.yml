@@ -1,10 +1,10 @@
 stages:
   - preparation
-  - building
-  - testing
-  - security
+  #- building
+  #- testing
+  #- security
 
-image: edbizarro/gitlab-ci-pipeline-php:7.2
+image: edbizarro/gitlab-ci-pipeline-php:7.4
 
 # Variables
 variables:
