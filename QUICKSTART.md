@@ -22,10 +22,15 @@ php artisan serve
 ```
 
 
-# Dashboard
+## Admin Dashboard
 
 Login
 
 ```
 admin@laravel8.com / Admin@123
 ```
+
+## Reference
+
+- https://jetstream.laravel.com/1.x/installation.html
+
