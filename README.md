@@ -22,12 +22,12 @@ This project build with:
 - [ ] Roles & Permissons management with Sanctum.
 - [ ] API Authentication and Authorization with Sanctum.
 - [ ] Realtime event broadcasting with Redis & Websocket (use Redis Docker).
-- [ ] Pagination skeleton advanced. (Vuejs)
+- [ ] CRUD & Pagination template. (Vuejs)
 - [ ] Subscription and Payment support (Stripe)
 - [ ] Social login for Google, Facebook, Twitter, LinkedIn, GitHub, GitLab and Bitbucket (Laravel Socialite)
 - [ ] Search Engine integrated with Algolia (simple enable in configure).
 - [ ] Search Engine integrated with ElasticSearch (simple enable in configure).
-- [ ] Background Queue.
+- [ ] Background Job Processing.
 
 
 ## Softwares
