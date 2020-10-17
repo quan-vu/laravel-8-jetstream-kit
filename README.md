@@ -59,6 +59,14 @@ php artisan serve
 
 Full Gudeline Documentaion
 
+## Laravel Common CLI
+
+```shell
+# Dump the current database schema and prune all existing migrations (use --prune).
+php artisan schema:dump
+```
+
+
 ## Reference
 
 - Elastic Search: https://www.elastic.co/guide/en/elasticsearch/reference/7.9/docker.html
