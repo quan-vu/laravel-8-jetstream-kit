@@ -19,7 +19,7 @@ This project build with:
 
 ## Features:
 
-- [ ] Roles & Permissons management with Sanctum.
+- [ ] Roles & Permissions management with Sanctum.
 - [ ] API Authentication and Authorization with Sanctum.
 - [ ] Realtime event broadcasting with Redis & Websocket (use Redis Docker).
 - [ ] CRUD & Pagination template. (Vuejs)
@@ -29,6 +29,9 @@ This project build with:
 - [ ] Search Engine integrated with ElasticSearch (simple enable in configure).
 - [ ] Background Job Processing.
 
+## Screenshot
+
+![Laravel 8 Jetstream Kit](screenshot.png)
 
 ## Softwares
 
@@ -58,6 +61,14 @@ php artisan serve
 ## Docs
 
 Full Gudeline Documentaion
+
+## Laravel Common CLI
+
+```shell
+# Dump the current database schema and prune all existing migrations (use --prune).
+php artisan schema:dump
+```
+
 
 ## Reference
 
