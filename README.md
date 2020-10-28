@@ -28,6 +28,8 @@ This project build with:
 - [ ] Search Engine integrated with Algolia (simple enable in configure).
 - [ ] Search Engine integrated with ElasticSearch (simple enable in configure).
 - [ ] Background Job Processing.
+- [ ] Support multiple Payment gateways (Stripe, Momo, ..).
+
 
 ## Screenshot
 
