@@ -10,12 +10,20 @@
                             <a href="/dashboard">
                                 <jet-application-mark class="block h-9 w-auto" />
                             </a>
+                            <a href="/posts">
+                                <jet-application-mark class="block h-9 w-auto" />
+                            </a>
                         </div>
 
                         <!-- Navigation Links -->
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <jet-nav-link href="/dashboard" :active="$page.currentRouteName == 'dashboard'">
                                 Dashboard
+                            </jet-nav-link>
+                        </div>
+                        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                            <jet-nav-link href="/posts" :active="$page.currentRouteName == 'posts'">
+                                Posts
                             </jet-nav-link>
                         </div>
                     </div>

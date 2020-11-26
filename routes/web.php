@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Admin\PostController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -24,3 +25,5 @@ Route::get('/', [HomeController::class, 'index']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
+
+Route::resource('posts', PostController::class);
