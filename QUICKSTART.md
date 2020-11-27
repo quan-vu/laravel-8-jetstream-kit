@@ -30,6 +30,34 @@ Login
 admin@laravel8.com / Admin@123
 ```
 
+## Testing
+
+Use Laravel testing
+
+```shell
+# Run unit test only
+make test-unit
+
+# Run feature test only
+make test-feature
+
+# Run all test
+make test
+```
+
+Use PHPUnit testing
+
+```shell
+# Run unit test only
+make phpunit-uinit
+
+# Run feature test only
+make phpunit-feature
+
+# Run all test
+make phpunit
+```
+
 ## Reference
 
 - https://jetstream.laravel.com/1.x/installation.html
