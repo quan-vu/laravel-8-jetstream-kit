@@ -2,7 +2,8 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
+use App\Models\User;
 
 class UserTest extends TestCase
 {
@@ -11,8 +12,15 @@ class UserTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testCreateUser()
     {
-        $this->assertTrue(true);
+        $name = 'Tester';
+
+        $user = User::factory()->make([
+            'name' => $name
+        ]);
+
+        $this->assertNotEmpty($user->name);
+        $this->assertEquals($name, $user->name);
     }
 }

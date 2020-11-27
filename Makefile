@@ -34,6 +34,13 @@ rollback:	##Does a rollback
 cache:
 	@php artisan cache:clear
 
+seed-db:
+	@composer dumpautoload
+	@php artisan db:seed
+
+seed-one:
+	@php artisan db:seed --class=$$name
+
 # ========== Composer
 composer:
 	@composer install
