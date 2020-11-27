@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.138292">
-    <testsuite name="Unit" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.002686">
-      <testsuite name="Tests\Unit\ExampleTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.002686">
-        <testcase name="testBasicTest" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Unit/ExampleTest.php" line="14" assertions="1" time="0.002686"/>
+  <testsuite name="" tests="4" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.151207">
+    <testsuite name="Unit" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.002716">
+      <testsuite name="Tests\Unit\ExampleTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Unit/ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.002651">
+        <testcase name="testBasicTest" class="Tests\Unit\ExampleTest" classname="Tests.Unit.ExampleTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Unit/ExampleTest.php" line="14" assertions="1" time="0.002651"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\UserTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Unit/UserTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.000065">
+        <testcase name="testExample" class="Tests\Unit\UserTest" classname="Tests.Unit.UserTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Unit/UserTest.php" line="14" assertions="1" time="0.000065"/>
       </testsuite>
     </testsuite>
-    <testsuite name="Feature" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.135607">
-      <testsuite name="Tests\Feature\ExampleTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Feature/ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.135607">
-        <testcase name="testBasicTest" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Feature/ExampleTest.php" line="15" assertions="1" time="0.135607"/>
+    <testsuite name="Feature" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.148491">
+      <testsuite name="Tests\Feature\ExampleTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Feature/ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.135122">
+        <testcase name="testBasicTest" class="Tests\Feature\ExampleTest" classname="Tests.Feature.ExampleTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Feature/ExampleTest.php" line="15" assertions="1" time="0.135122"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\LoginTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Feature/LoginTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.013369">
+        <testcase name="testExample" class="Tests\Feature\LoginTest" classname="Tests.Feature.LoginTest" file="/home/quanvu/Projects/laravel-8-jetstream-kit/tests/Feature/LoginTest.php" line="16" assertions="1" time="0.013369"/>
       </testsuite>
     </testsuite>
   </testsuite>

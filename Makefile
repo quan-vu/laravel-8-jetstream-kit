@@ -73,17 +73,38 @@ up:		install db-sync	##then installs composer, clones the repo and enables mcryp
 # Make sure to clear your configuration cache
 # before running your tests!
 
+# Create a test in the Feature directory...
+feature-test:
+	@php artisan make:test $$name
+
+# Create a test in the Unit directory...
+
 test-feature:
-	@php artisan config:clear
-	./vendor/bin/phpunit -c phpunit.xml --coverage-html reports/coverage $(phpunitOptions) --coverage-clover reports/clover.xml --log-junit reports/junit.xml
+	@php artisan test --testsuite=Feature --stop-on-failure
 
 test-unit:
+	@php artisan test --testsuite=Unit --stop-on-failure
+
+test:
+	@php artisan test
+
+test-create-unit:
+	@php artisan make:test $$name --unit
+
+test-create-feature:
+	@php artisan make:test $$name
+
+phpunit-feature:
 	@php artisan config:clear
 	./vendor/bin/phpunit -c phpunit.xml --coverage-html reports/coverage $(phpunitOptions) --coverage-clover reports/clover.xml --log-junit reports/junit.xml
 
-testing:
-	@make test-unit
-	@make test-feature
+phpunit-unit:
+	@php artisan config:clear
+	./vendor/bin/phpunit -c phpunit.xml --coverage-html reports/coverage $(phpunitOptions) --coverage-clover reports/clover.xml --log-junit reports/junit.xml
+
+phpunit:
+	@make phpunit-unit
+	@make phpunit-feature
 
 # ========== Workflow
 start:
