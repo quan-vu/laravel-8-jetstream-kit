@@ -57,6 +57,8 @@ yarn watch
 Start Laravel development
 
 ```shell
+composer install
+php artisan key:generate
 php artisan serve
 ```
 

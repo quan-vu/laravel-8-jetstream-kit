@@ -21,22 +21,25 @@ help:		##Shows help
 	@cat makefile | grep "##." | sed '2d;s/##//;s/://'
 
 
-serve:		##Serves the environment into given port (8000 by default)
+# ========== Laravel
+serve:
 	@php artisan serve --port $(p)
 
-
-composer:	## Composer install
-	@composer install
-
-load:		##Dumps the autoloader
-	@composer dumpautoload
-
-migrate:		##Runs migrations
+migrate:
 	@php artisan migrate
-
 
 rollback:	##Does a rollback
 	@php artisan migrate:rollback
+
+cache:
+	@php artisan cache:clear
+
+# ========== Composer
+composer:
+	@composer install
+
+load:
+	@composer dumpautoload
 
 
 connect:		##Connects to server
@@ -66,10 +69,32 @@ up:		install db-sync	##then installs composer, clones the repo and enables mcryp
 	@echo "Enabling mcrypt"
 	@sudo php5enmod mcrypt
 
+# ========== Testing
+# Make sure to clear your configuration cache
+# before running your tests!
 
+test-feature:
+	@php artisan config:clear
+	./vendor/bin/phpunit -c phpunit.xml --coverage-html reports/coverage $(phpunitOptions) --coverage-clover reports/clover.xml --log-junit reports/junit.xml
+
+test-unit:
+	@php artisan config:clear
+	./vendor/bin/phpunit -c phpunit.xml --coverage-html reports/coverage $(phpunitOptions) --coverage-clover reports/clover.xml --log-junit reports/junit.xml
+
+testing:
+	@make test-unit
+	@make test-feature
+
+# ========== Workflow
 start:
 	@make composer
 	@make load
 	@make serve
+
+clean:
+	@rm -rf vendor
+	@make composer
+	@make cache
+	@make load
 
 .PHONY: help
