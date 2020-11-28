@@ -8,11 +8,22 @@ use Illuminate\Support\Facades\Validator;
 use Inertia\Inertia;
 use App\Models\Post;
 
+use Illuminate\Support\Facades\Log;
+
 class PostController extends Controller
 {
     public function index()
     {
         $data = Post::all();
+        
+        // Demo send logging to slack with level: info, debug, critical
+        Log::info('Demo - Someone viewed all posts.');
+        Log::debug('Demo - Some errors was happend');
+        
+        // Custom log level to slack LaravelMonitoring
+        Log::channel('slack_info')->info('Demo - Someone viewed all posts.');
+        Log::channel('slack_debug')->debug('Debug - Some errors was happend.');
+        
         return Inertia::render('Posts/Index', ['data' => $data]);
 
         // return Inertia::render('Posts/Index', [

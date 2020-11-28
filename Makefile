@@ -33,6 +33,7 @@ rollback:	##Does a rollback
 
 cache:
 	@php artisan cache:clear
+	@php artisan config:clear
 
 seed-db:
 	@composer dumpautoload
@@ -115,6 +116,12 @@ phpunit:
 
 # ========== Workflow
 start:
+	@make composer
+	@make load
+	@make serve
+
+restart:
+	@make cache
 	@make composer
 	@make load
 	@make serve
