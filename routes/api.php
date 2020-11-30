@@ -16,13 +16,13 @@ use App\Http\Controllers\API\PostAPIController;
 |
 */
 
-Route::group([ 'prefix' => 'v1'], function () {
+Route::prefix('v1')->name('api.')->group(function () {
     Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
         return $request->user();
     });
 
     Route::group([ 'prefix' => 'posts'], function () {
-        Route::get('/', [PostAPIController::class, 'index']);    
+        Route::get('/', [PostAPIController::class, 'index'])->name('posts.list');    
     });
 });
 
