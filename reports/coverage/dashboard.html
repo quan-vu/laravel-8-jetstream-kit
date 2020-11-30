@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/quanvu/Projects/laravel-8-jetstream-kit/app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href="_css/style.css" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/home/quanvu/Projects/laravel-8-jetstream-kit/app</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Actions/Fortify/CreateNewUser.php.html#13">App\Actions\Fortify\CreateNewUser</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/ResetUserPassword.php.html#9">App\Actions\Fortify\ResetUserPassword</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View/Components/GuestLayout.php.html#7">App\View\Components\GuestLayout</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/BroadcastServiceProvider.php.html#8">App\Providers\BroadcastServiceProvider</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#9">App\Policies\TeamPolicy</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/TrustHosts.php.html#7">App\Http\Middleware\TrustHosts</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#9">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#13">App\Http\Controllers\Admin\PostController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/AdminBaseController.php.html#9">App\Http\Controllers\Admin\AdminBaseController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/PasswordValidationRules.php.html#7">App\Actions\Fortify\PasswordValidationRules</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Exceptions/Handler.php.html#7">App\Exceptions\Handler</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/UpdateTeamName.php.html#9">App\Actions\Jetstream\UpdateTeamName</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/DeleteUser.php.html#9">App\Actions\Jetstream\DeleteUser</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/DeleteTeam.php.html#7">App\Actions\Jetstream\DeleteTeam</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/CreateTeam.php.html#10">App\Actions\Jetstream\CreateTeam</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/AddTeamMember.php.html#12">App\Actions\Jetstream\AddTeamMember</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/UpdateUserProfileInformation.php.html#9">App\Actions\Fortify\UpdateUserProfileInformation</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/UpdateUserPassword.php.html#9">App\Actions\Fortify\UpdateUserPassword</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Frontend/FrontendBaseController.php.html#9">App\Http\Controllers\Frontend\FrontendBaseController</a></td><td class="text-right">14%</td></tr>
+       <tr><td><a href="Http/Controllers/API/BaseAPIController.php.html#9">App\Http\Controllers\API\BaseAPIController</a></td><td class="text-right">50%</td></tr>
+       <tr><td><a href="Providers/AppServiceProvider.php.html#10">App\Providers\AppServiceProvider</a></td><td class="text-right">63%</td></tr>
+       <tr><td><a href="Console/Kernel.php.html#8">App\Console\Kernel</a></td><td class="text-right">75%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#13">App\Http\Controllers\Admin\PostController</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Actions/Jetstream/AddTeamMember.php.html#12">App\Actions\Jetstream\AddTeamMember</a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#9">App\Http\Middleware\RedirectIfAuthenticated</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Actions/Fortify/UpdateUserPassword.php.html#9">App\Actions\Fortify\UpdateUserPassword</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Actions/Fortify/UpdateUserProfileInformation.php.html#9">App\Actions\Fortify\UpdateUserProfileInformation</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#7">App\Http\Middleware\Authenticate</a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Providers/AppServiceProvider.php.html#10">App\Providers\AppServiceProvider</a></td><td class="text-right">3</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Actions/Fortify/CreateNewUser.php.html#21"><abbr title="App\Actions\Fortify\CreateNewUser::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#19"><abbr title="App\Policies\TeamPolicy::viewAny">viewAny</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#76"><abbr title="App\Http\Controllers\Admin\PostController::destroy">destroy</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#84"><abbr title="App\Http\Controllers\Admin\PostController::show">show</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Frontend/FrontendBaseController.php.html#13"><abbr title="App\Http\Controllers\Frontend\FrontendBaseController::sendSuccess">sendSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Frontend/FrontendBaseController.php.html#21"><abbr title="App\Http\Controllers\Frontend\FrontendBaseController::sendError">sendError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#15"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#19"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Middleware/TrustHosts.php.html#14"><abbr title="App\Http\Middleware\TrustHosts::hosts">hosts</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#31"><abbr title="App\Policies\TeamPolicy::view">view</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#39"><abbr title="App\Http\Controllers\Admin\PostController::store">store</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#42"><abbr title="App\Policies\TeamPolicy::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#54"><abbr title="App\Policies\TeamPolicy::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#66"><abbr title="App\Policies\TeamPolicy::addTeamMember">addTeamMember</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#78"><abbr title="App\Policies\TeamPolicy::updateTeamMember">updateTeamMember</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#90"><abbr title="App\Policies\TeamPolicy::removeTeamMember">removeTeamMember</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Policies/TeamPolicy.php.html#102"><abbr title="App\Policies\TeamPolicy::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/BroadcastServiceProvider.php.html#15"><abbr title="App\Providers\BroadcastServiceProvider::boot">boot</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="View/Components/GuestLayout.php.html#14"><abbr title="App\View\Components\GuestLayout::render">render</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#57"><abbr title="App\Http\Controllers\Admin\PostController::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#15"><abbr title="App\Http\Controllers\Admin\PostController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/CreateNewUser.php.html#46"><abbr title="App\Actions\Fortify\CreateNewUser::createTeam">createTeam</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/AdminBaseController.php.html#28"><abbr title="App\Http\Controllers\Admin\AdminBaseController::frontendView">frontendView</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/ResetUserPassword.php.html#20"><abbr title="App\Actions\Fortify\ResetUserPassword::reset">reset</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/UpdateUserPassword.php.html#20"><abbr title="App\Actions\Fortify\UpdateUserPassword::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/UpdateUserProfileInformation.php.html#18"><abbr title="App\Actions\Fortify\UpdateUserProfileInformation::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/AddTeamMember.php.html#23"><abbr title="App\Actions\Jetstream\AddTeamMember::add">add</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/AddTeamMember.php.html#45"><abbr title="App\Actions\Jetstream\AddTeamMember::validate">validate</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/AddTeamMember.php.html#62"><abbr title="App\Actions\Jetstream\AddTeamMember::rules">rules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/AddTeamMember.php.html#79"><abbr title="App\Actions\Jetstream\AddTeamMember::ensureUserIsNotAlreadyOnTeam">ensureUserIsNotAlreadyOnTeam</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/CreateTeam.php.html#19"><abbr title="App\Actions\Jetstream\CreateTeam::create">create</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/DeleteTeam.php.html#15"><abbr title="App\Actions\Jetstream\DeleteTeam::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/DeleteUser.php.html#24"><abbr title="App\Actions\Jetstream\DeleteUser::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/DeleteUser.php.html#35"><abbr title="App\Actions\Jetstream\DeleteUser::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/DeleteUser.php.html#50"><abbr title="App\Actions\Jetstream\DeleteUser::deleteTeams">deleteTeams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Jetstream/UpdateTeamName.php.html#19"><abbr title="App\Actions\Jetstream\UpdateTeamName::update">update</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Console/Kernel.php.html#25"><abbr title="App\Console\Kernel::schedule">schedule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Exceptions/Handler.php.html#33"><abbr title="App\Exceptions\Handler::register">register</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/API/BaseAPIController.php.html#19"><abbr title="App\Http\Controllers\API\BaseAPIController::error">error</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/AdminBaseController.php.html#13"><abbr title="App\Http\Controllers\Admin\AdminBaseController::sendSuccess">sendSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/AdminBaseController.php.html#21"><abbr title="App\Http\Controllers\Admin\AdminBaseController::sendError">sendError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Actions/Fortify/PasswordValidationRules.php.html#14"><abbr title="App\Actions\Fortify\PasswordValidationRules::passwordRules">passwordRules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Providers/AppServiceProvider.php.html#27"><abbr title="App\Providers\AppServiceProvider::boot">boot</abbr></a></td><td class="text-right">60%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Http/Middleware/RedirectIfAuthenticated.php.html#19"><abbr title="App\Http\Middleware\RedirectIfAuthenticated::handle">handle</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="Actions/Fortify/UpdateUserPassword.php.html#20"><abbr title="App\Actions\Fortify\UpdateUserPassword::update">update</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Actions/Fortify/UpdateUserProfileInformation.php.html#18"><abbr title="App\Actions\Fortify\UpdateUserProfileInformation::update">update</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Actions/Jetstream/AddTeamMember.php.html#62"><abbr title="App\Actions\Jetstream\AddTeamMember::rules">rules</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#57"><abbr title="App\Http\Controllers\Admin\PostController::update">update</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Controllers/Admin/PostController.php.html#76"><abbr title="App\Http\Controllers\Admin\PostController::destroy">destroy</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Http/Middleware/Authenticate.php.html#15"><abbr title="App\Http\Middleware\Authenticate::redirectTo">redirectTo</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Providers/AppServiceProvider.php.html#27"><abbr title="App\Providers\AppServiceProvider::boot">boot</abbr></a></td><td class="text-right">2</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.1.8</a> using <a href="https://secure.php.net/" target="_top">PHP 7.4.12</a> with <a href="https://xdebug.org/">Xdebug 2.9.8</a> and <a href="https://phpunit.de/">PHPUnit 9.3.10</a> at Mon Nov 30 16:14:26 UTC 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js" type="text/javascript"></script>
+  <script src="_js/d3.min.js" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([19,0,1,0,0,0,1,1,1,0,0,18], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([42,0,0,0,0,0,0,1,0,0,0,16], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,2,"<a href=\"Actions\/Fortify\/CreateNewUser.php.html#13\">App\\Actions\\Fortify\\CreateNewUser<\/a>"],[0,1,"<a href=\"Actions\/Fortify\/ResetUserPassword.php.html#9\">App\\Actions\\Fortify\\ResetUserPassword<\/a>"],[0,2,"<a href=\"Actions\/Fortify\/UpdateUserPassword.php.html#9\">App\\Actions\\Fortify\\UpdateUserPassword<\/a>"],[0,2,"<a href=\"Actions\/Fortify\/UpdateUserProfileInformation.php.html#9\">App\\Actions\\Fortify\\UpdateUserProfileInformation<\/a>"],[0,5,"<a href=\"Actions\/Jetstream\/AddTeamMember.php.html#12\">App\\Actions\\Jetstream\\AddTeamMember<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/CreateTeam.php.html#10\">App\\Actions\\Jetstream\\CreateTeam<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/DeleteTeam.php.html#7\">App\\Actions\\Jetstream\\DeleteTeam<\/a>"],[0,3,"<a href=\"Actions\/Jetstream\/DeleteUser.php.html#9\">App\\Actions\\Jetstream\\DeleteUser<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/UpdateTeamName.php.html#9\">App\\Actions\\Jetstream\\UpdateTeamName<\/a>"],[75,2,"<a href=\"Console\/Kernel.php.html#8\">App\\Console\\Kernel<\/a>"],[0,1,"<a href=\"Exceptions\/Handler.php.html#7\">App\\Exceptions\\Handler<\/a>"],[50,2,"<a href=\"Http\/Controllers\/API\/BaseAPIController.php.html#9\">App\\Http\\Controllers\\API\\BaseAPIController<\/a>"],[100,1,"<a href=\"Http\/Controllers\/API\/PostAPIController.php.html#8\">App\\Http\\Controllers\\API\\PostAPIController<\/a>"],[0,3,"<a href=\"Http\/Controllers\/Admin\/AdminBaseController.php.html#9\">App\\Http\\Controllers\\Admin\\AdminBaseController<\/a>"],[0,7,"<a href=\"Http\/Controllers\/Admin\/PostController.php.html#13\">App\\Http\\Controllers\\Admin\\PostController<\/a>"],[100,0,"<a href=\"Http\/Controllers\/Controller.php.html#10\">App\\Http\\Controllers\\Controller<\/a>"],[14.285714285714285,3,"<a href=\"Http\/Controllers\/Frontend\/FrontendBaseController.php.html#9\">App\\Http\\Controllers\\Frontend\\FrontendBaseController<\/a>"],[100,2,"<a href=\"Http\/Controllers\/Frontend\/HomeController.php.html#7\">App\\Http\\Controllers\\Frontend\\HomeController<\/a>"],[100,0,"<a href=\"Http\/Kernel.php.html#7\">App\\Http\\Kernel<\/a>"],[0,2,"<a href=\"Http\/Middleware\/Authenticate.php.html#7\">App\\Http\\Middleware\\Authenticate<\/a>"],[100,0,"<a href=\"Http\/Middleware\/EncryptCookies.php.html#7\">App\\Http\\Middleware\\EncryptCookies<\/a>"],[100,0,"<a href=\"Http\/Middleware\/PreventRequestsDuringMaintenance.php.html#7\">App\\Http\\Middleware\\PreventRequestsDuringMaintenance<\/a>"],[0,4,"<a href=\"Http\/Middleware\/RedirectIfAuthenticated.php.html#9\">App\\Http\\Middleware\\RedirectIfAuthenticated<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrimStrings.php.html#7\">App\\Http\\Middleware\\TrimStrings<\/a>"],[0,1,"<a href=\"Http\/Middleware\/TrustHosts.php.html#7\">App\\Http\\Middleware\\TrustHosts<\/a>"],[100,0,"<a href=\"Http\/Middleware\/TrustProxies.php.html#8\">App\\Http\\Middleware\\TrustProxies<\/a>"],[100,0,"<a href=\"Http\/Middleware\/VerifyCsrfToken.php.html#7\">App\\Http\\Middleware\\VerifyCsrfToken<\/a>"],[100,0,"<a href=\"Models\/Membership.php.html#7\">App\\Models\\Membership<\/a>"],[100,0,"<a href=\"Models\/Post.php.html#8\">App\\Models\\Post<\/a>"],[100,0,"<a href=\"Models\/Team.php.html#10\">App\\Models\\Team<\/a>"],[100,0,"<a href=\"Models\/User.php.html#13\">App\\Models\\User<\/a>"],[0,8,"<a href=\"Policies\/TeamPolicy.php.html#9\">App\\Policies\\TeamPolicy<\/a>"],[63.63636363636363,3,"<a href=\"Providers\/AppServiceProvider.php.html#10\">App\\Providers\\AppServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/AuthServiceProvider.php.html#9\">App\\Providers\\AuthServiceProvider<\/a>"],[0,1,"<a href=\"Providers\/BroadcastServiceProvider.php.html#8\">App\\Providers\\BroadcastServiceProvider<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#10\">App\\Providers\\EventServiceProvider<\/a>"],[100,2,"<a href=\"Providers\/FortifyServiceProvider.php.html#12\">App\\Providers\\FortifyServiceProvider<\/a>"],[100,3,"<a href=\"Providers\/JetstreamServiceProvider.php.html#13\">App\\Providers\\JetstreamServiceProvider<\/a>"],[100,2,"<a href=\"Providers\/RouteServiceProvider.php.html#11\">App\\Providers\\RouteServiceProvider<\/a>"],[0,1,"<a href=\"View\/Components\/GuestLayout.php.html#7\">App\\View\\Components\\GuestLayout<\/a>"],[0,1,"<a href=\"Actions\/Fortify\/PasswordValidationRules.php.html#7\">App\\Actions\\Fortify\\PasswordValidationRules<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Actions\/Fortify\/CreateNewUser.php.html#21\">App\\Actions\\Fortify\\CreateNewUser::create<\/a>"],[0,1,"<a href=\"Actions\/Fortify\/CreateNewUser.php.html#46\">App\\Actions\\Fortify\\CreateNewUser::createTeam<\/a>"],[0,1,"<a href=\"Actions\/Fortify\/ResetUserPassword.php.html#20\">App\\Actions\\Fortify\\ResetUserPassword::reset<\/a>"],[0,2,"<a href=\"Actions\/Fortify\/UpdateUserPassword.php.html#20\">App\\Actions\\Fortify\\UpdateUserPassword::update<\/a>"],[0,2,"<a href=\"Actions\/Fortify\/UpdateUserProfileInformation.php.html#18\">App\\Actions\\Fortify\\UpdateUserProfileInformation::update<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/AddTeamMember.php.html#23\">App\\Actions\\Jetstream\\AddTeamMember::add<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/AddTeamMember.php.html#45\">App\\Actions\\Jetstream\\AddTeamMember::validate<\/a>"],[0,2,"<a href=\"Actions\/Jetstream\/AddTeamMember.php.html#62\">App\\Actions\\Jetstream\\AddTeamMember::rules<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/AddTeamMember.php.html#79\">App\\Actions\\Jetstream\\AddTeamMember::ensureUserIsNotAlreadyOnTeam<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/CreateTeam.php.html#19\">App\\Actions\\Jetstream\\CreateTeam::create<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/DeleteTeam.php.html#15\">App\\Actions\\Jetstream\\DeleteTeam::delete<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/DeleteUser.php.html#24\">App\\Actions\\Jetstream\\DeleteUser::__construct<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/DeleteUser.php.html#35\">App\\Actions\\Jetstream\\DeleteUser::delete<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/DeleteUser.php.html#50\">App\\Actions\\Jetstream\\DeleteUser::deleteTeams<\/a>"],[0,1,"<a href=\"Actions\/Jetstream\/UpdateTeamName.php.html#19\">App\\Actions\\Jetstream\\UpdateTeamName::update<\/a>"],[0,1,"<a href=\"Console\/Kernel.php.html#25\">App\\Console\\Kernel::schedule<\/a>"],[100,1,"<a href=\"Console\/Kernel.php.html#35\">App\\Console\\Kernel::commands<\/a>"],[0,1,"<a href=\"Exceptions\/Handler.php.html#33\">App\\Exceptions\\Handler::register<\/a>"],[100,1,"<a href=\"Http\/Controllers\/API\/BaseAPIController.php.html#11\">App\\Http\\Controllers\\API\\BaseAPIController::success<\/a>"],[0,1,"<a href=\"Http\/Controllers\/API\/BaseAPIController.php.html#19\">App\\Http\\Controllers\\API\\BaseAPIController::error<\/a>"],[100,1,"<a href=\"Http\/Controllers\/API\/PostAPIController.php.html#10\">App\\Http\\Controllers\\API\\PostAPIController::index<\/a>"],[0,1,"<a href=\"Http\/Controllers\/Admin\/AdminBaseController.php.html#13\">App\\Http\\Controllers\\Admin\\AdminBaseController::sendSuccess<\/a>"],[0,1,"<a href=\"Http\/Controllers\/Admin\/AdminBaseController.php.html#21\">App\\Http\\Controllers\\Admin\\AdminBaseController::sendError<\/a>"],[0,1,"<a href=\"Http\/Controllers\/Admin\/AdminBaseController.php.html#28\">App\\Http\\Controllers\\Admin\\AdminBaseController::frontendView<\/a>"],[0,1,"<a href=\"Http\/Controllers\/Admin\/PostController.php.html#15\">App\\Http\\Controllers\\Admin\\PostController::index<\/a>"],[0,1,"<a href=\"Http\/Controllers\/Admin\/PostController.php.html#39\">App\\Http\\Controllers\\Admin\\PostController::store<\/a>"],[0,2,"<a href=\"Http\/Controllers\/Admin\/PostController.php.html#57\">App\\Http\\Controllers\\Admin\\PostController::update<\/a>"],[0,2,"<a href=\"Http\/Controllers\/Admin\/PostController.php.html#76\">App\\Http\\Controllers\\Admin\\PostController::destroy<\/a>"],[0,1,"<a href=\"Http\/Controllers\/Admin\/PostController.php.html#84\">App\\Http\\Controllers\\Admin\\PostController::show<\/a>"],[0,1,"<a href=\"Http\/Controllers\/Frontend\/FrontendBaseController.php.html#13\">App\\Http\\Controllers\\Frontend\\FrontendBaseController::sendSuccess<\/a>"],[0,1,"<a href=\"Http\/Controllers\/Frontend\/FrontendBaseController.php.html#21\">App\\Http\\Controllers\\Frontend\\FrontendBaseController::sendError<\/a>"],[100,1,"<a href=\"Http\/Controllers\/Frontend\/FrontendBaseController.php.html#28\">App\\Http\\Controllers\\Frontend\\FrontendBaseController::frontendView<\/a>"],[100,1,"<a href=\"Http\/Controllers\/Frontend\/HomeController.php.html#14\">App\\Http\\Controllers\\Frontend\\HomeController::__construct<\/a>"],[100,1,"<a href=\"Http\/Controllers\/Frontend\/HomeController.php.html#24\">App\\Http\\Controllers\\Frontend\\HomeController::index<\/a>"],[0,2,"<a href=\"Http\/Middleware\/Authenticate.php.html#15\">App\\Http\\Middleware\\Authenticate::redirectTo<\/a>"],[0,4,"<a href=\"Http\/Middleware\/RedirectIfAuthenticated.php.html#19\">App\\Http\\Middleware\\RedirectIfAuthenticated::handle<\/a>"],[0,1,"<a href=\"Http\/Middleware\/TrustHosts.php.html#14\">App\\Http\\Middleware\\TrustHosts::hosts<\/a>"],[0,1,"<a href=\"Policies\/TeamPolicy.php.html#19\">App\\Policies\\TeamPolicy::viewAny<\/a>"],[0,1,"<a href=\"Policies\/TeamPolicy.php.html#31\">App\\Policies\\TeamPolicy::view<\/a>"],[0,1,"<a href=\"Policies\/TeamPolicy.php.html#42\">App\\Policies\\TeamPolicy::create<\/a>"],[0,1,"<a href=\"Policies\/TeamPolicy.php.html#54\">App\\Policies\\TeamPolicy::update<\/a>"],[0,1,"<a href=\"Policies\/TeamPolicy.php.html#66\">App\\Policies\\TeamPolicy::addTeamMember<\/a>"],[0,1,"<a href=\"Policies\/TeamPolicy.php.html#78\">App\\Policies\\TeamPolicy::updateTeamMember<\/a>"],[0,1,"<a href=\"Policies\/TeamPolicy.php.html#90\">App\\Policies\\TeamPolicy::removeTeamMember<\/a>"],[0,1,"<a href=\"Policies\/TeamPolicy.php.html#102\">App\\Policies\\TeamPolicy::delete<\/a>"],[100,1,"<a href=\"Providers\/AppServiceProvider.php.html#17\">App\\Providers\\AppServiceProvider::register<\/a>"],[60,2,"<a href=\"Providers\/AppServiceProvider.php.html#27\">App\\Providers\\AppServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/AuthServiceProvider.php.html#25\">App\\Providers\\AuthServiceProvider::boot<\/a>"],[0,1,"<a href=\"Providers\/BroadcastServiceProvider.php.html#15\">App\\Providers\\BroadcastServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/EventServiceProvider.php.html#28\">App\\Providers\\EventServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/FortifyServiceProvider.php.html#19\">App\\Providers\\FortifyServiceProvider::register<\/a>"],[100,1,"<a href=\"Providers\/FortifyServiceProvider.php.html#29\">App\\Providers\\FortifyServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/JetstreamServiceProvider.php.html#20\">App\\Providers\\JetstreamServiceProvider::register<\/a>"],[100,1,"<a href=\"Providers\/JetstreamServiceProvider.php.html#30\">App\\Providers\\JetstreamServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/JetstreamServiceProvider.php.html#46\">App\\Providers\\JetstreamServiceProvider::configurePermissions<\/a>"],[100,1,"<a href=\"Providers\/RouteServiceProvider.php.html#36\">App\\Providers\\RouteServiceProvider::boot<\/a>"],[100,1,"<a href=\"Providers\/RouteServiceProvider.php.html#55\">App\\Providers\\RouteServiceProvider::configureRateLimiting<\/a>"],[0,1,"<a href=\"View\/Components\/GuestLayout.php.html#14\">App\\View\\Components\\GuestLayout::render<\/a>"],[0,1,"<a href=\"Actions\/Fortify\/PasswordValidationRules.php.html#14\">App\\Actions\\Fortify\\PasswordValidationRules::passwordRules<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

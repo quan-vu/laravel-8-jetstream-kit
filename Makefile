@@ -95,12 +95,17 @@ test-unit:
 
 test:
 	@php artisan test
+	./vendor/bin/phpunit --coverage-html reports/coverage
 
 test-create-unit:
 	@php artisan make:test $$name --unit
 
 test-create-feature:
 	@php artisan make:test $$name
+
+phpunit-coverage:
+	@php artisan config:clear
+	./vendor/bin/phpunit --coverage-html reports/coverage
 
 phpunit-feature:
 	@php artisan config:clear
@@ -110,9 +115,11 @@ phpunit-unit:
 	@php artisan config:clear
 	./vendor/bin/phpunit -c phpunit.xml --coverage-html reports/coverage $(phpunitOptions) --coverage-clover reports/clover.xml --log-junit reports/junit.xml
 
+
 phpunit:
 	@make phpunit-unit
 	@make phpunit-feature
+	@make phpunit-coverage
 
 # ========== Workflow
 start:

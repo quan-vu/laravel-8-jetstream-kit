@@ -35,6 +35,27 @@ This project build with:
 
 ![Laravel 8 Jetstream Kit](screenshot.png)
 
+## Testing
+
+In this project we Testing and codecoverage report with Xdebug.
+
+- PHP 7.4.12
+- PHPUnit 9.3.10
+- php-code-coverage 9.1.8
+- Xdebug 2.9.8
+
+Easy install Xdebug on Ubuntu 18.04+
+
+```shell
+sudo apt-get install php-xdebug
+```
+
+Run testing
+
+```shell
+make test
+```
+
 ## Softwares
 
 ### Elasticsearch
@@ -77,7 +98,7 @@ php artisan schema:dump
 ## Reference
 
 - Elastic Search: https://www.elastic.co/guide/en/elasticsearch/reference/7.9/docker.html
-
+- XDebug: https://xdebug.org/docs/install
 
 
 ## License
