@@ -49,6 +49,9 @@ composer:
 load:
 	@composer dumpautoload
 
+composer-require:
+	@composer require $$name
+	@make test
 
 connect:		##Connects to server
 	@ssh $(url) -p$(port)

@@ -56,6 +56,8 @@ Run testing
 make test
 ```
 
+![Code Coverage](screenshot-code-coverage.png)
+
 ## Softwares
 
 ### Elasticsearch

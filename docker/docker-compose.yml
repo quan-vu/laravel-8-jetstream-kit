@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.3'
 
 services:
 
@@ -34,6 +34,18 @@ services:
     depends_on:
       - elasticsearch
 
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports: 
+      - 6379:6379
+    volumes:
+      - redis-data:/var/lib/redis
+      # - $PWD/redis-data:/var/lib/redis
+
 volumes:
   elasticsearch-data:
+    driver: local
+  redis-data:
     driver: local
