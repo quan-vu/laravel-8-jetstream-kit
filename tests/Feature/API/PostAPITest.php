@@ -8,7 +8,17 @@ use Tests\TestCase;
 
 class PostAPITest extends TestCase
 {
-    protected $expectedJsonStructPostListPagination = [
+    protected array $expectedJsonStructPostList = [
+        'message',
+        'data' => [
+            '*' => [
+                'title',
+                'content'
+            ]
+        ]
+    ];
+
+    protected array $expectedJsonStructPostListPagination = [
         'message',
         'data' => [
             'current_page',
@@ -37,6 +47,6 @@ class PostAPITest extends TestCase
 
         $response
             ->assertStatus(200)
-            ->assertJsonStructure($this->expectedJsonStructPostListPagination);
+            ->assertJsonStructure($this->expectedJsonStructPostList);
     }
 }
