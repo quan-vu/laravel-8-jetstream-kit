@@ -74,6 +74,12 @@ Run UI Testing:
 php artisan dusk
 ```
 
+Create a UI TestCase
+
+```shell
+php artisan dusk:make LoginTest
+```
+
 
 
 ## Softwares
