@@ -58,6 +58,24 @@ make test
 
 ![Code Coverage](screenshot-code-coverage.png)
 
+## Testing UI (Browser Test)
+
+We use Laravel Dusk for handle UI Testing.
+
+Run this command to Laravel Dusk install depenencies itself:
+
+```shell
+php artisan dusk:install
+```
+
+Run UI Testing:
+
+```shell
+php artisan dusk
+```
+
+
+
 ## Softwares
 
 ### Elasticsearch
