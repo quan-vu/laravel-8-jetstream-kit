@@ -11,7 +11,7 @@ use App\Jobs\CropThumbnailJob;
 
 use Illuminate\Support\Facades\Log;
 
-class PostController extends Controller
+class DemoController extends Controller
 {
     public function index()
     {
@@ -46,10 +46,8 @@ class PostController extends Controller
   
         $post = Post::create($request->all());
 
-        // Dispatch for crop multiple size for post thumbnail
-        // onQueue: default, foo
-        // see queue group in Current Workload line
-        CropThumbnailJob::dispatch($post)->onQueue('default');;
+        // Dispacth for crop multiple size for post thumbnail
+        CropThumbnailJob::dispatch($post);
   
         return redirect()->back()
                     ->with('message', 'Post Created Successfully.');

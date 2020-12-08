@@ -179,7 +179,13 @@ return [
     'environments' => [
         'production' => [
             'supervisor-1' => [
+                'connection' => 'redis',
+                'queue' => ['default','foo','cron'],   // Add more Queue here
+                'balance' => 'auto',
                 'maxProcesses' => 10,
+                'memory' => 128,
+                'tries' => 1,
+                'nice' => 0,
                 'balanceMaxShift' => 1,
                 'balanceCooldown' => 3,
             ],
@@ -187,7 +193,13 @@ return [
 
         'local' => [
             'supervisor-1' => [
-                'maxProcesses' => 3,
+                'connection' => 'redis',
+                'queue' => ['default','foo','cron'],   // Add more Queue here
+                'balance' => 'auto',
+                'maxProcesses' => 1,
+                'memory' => 128,
+                'tries' => 1,
+                'nice' => 0,
             ],
         ],
     ],
