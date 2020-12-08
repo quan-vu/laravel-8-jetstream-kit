@@ -80,6 +80,11 @@ up:		install db-sync	##then installs composer, clones the repo and enables mcryp
 	@echo "Enabling mcrypt"
 	@sudo php5enmod mcrypt
 
+# ========== Redis
+redis-queue:
+	@php artisan horizon
+
+
 # ========== Testing
 # Make sure to clear your configuration cache
 # before running your tests!
