@@ -15,7 +15,7 @@ class DemoController extends Controller
 {
     public function index()
     {
-        $data = Post::all();
+        $data = paginate(10);
         
         // Demo send logging to slack with level: info, debug, critical
         Log::info('Demo - Someone viewed all posts.');

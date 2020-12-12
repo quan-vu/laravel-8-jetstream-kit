@@ -15,7 +15,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $data = Post::all();
+        $data = Post::paginate(10);
         
         // Demo send logging to slack with level: info, debug, critical
         Log::info('Demo - Someone viewed all posts.');
@@ -25,7 +25,7 @@ class PostController extends Controller
         Log::channel('slack_info')->info('Demo - Someone viewed all posts.');
         Log::channel('slack_debug')->debug('Debug - Some errors was happend.');
         
-        return Inertia::render('Posts/Index', ['data' => $data]);
+        return Inertia::render('Posts/Index', ['data' => $data->items()]);
 
         // return Inertia::render('Posts/Index', [
         //     'sessions' => $this->sessions($request)->all(),
