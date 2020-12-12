@@ -22,14 +22,14 @@ This project build with:
 - [ ] Roles & Permissions management with Sanctum.
 - [ ] API Authentication and Authorization with Sanctum.
 - [ ] Realtime event broadcasting with Redis & Websocket (use Redis Docker).
-- [ ] CRUD & Pagination template. (Vuejs)
-- [ ] Subscription and Payment support (Stripe)
+- [x] CRUD & Pagination template. (Vuejs)
 - [ ] Social login for Google, Facebook, Twitter, LinkedIn, GitHub, GitLab and Bitbucket (Laravel Socialite)
 - [ ] Search Engine integrated with Algolia (simple enable in configure).
 - [ ] Search Engine integrated with ElasticSearch (simple enable in configure).
-- [ ] Background Job Processing.
-- [ ] Support multiple Payment gateways (Stripe, Momo, ..).
-
+- [x] Background Job, Queue processing with Redis.
+- [x] PHPUnit testing for FeatureTest, UnitTest, UITest. 
+- [ ] Subscription and Payment support (Stripe)
+- [ ] Multiple Payment Gateways (Stripe, Momo, ..).
 
 ## Screenshot
 
