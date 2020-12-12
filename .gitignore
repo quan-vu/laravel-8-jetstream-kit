@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor
 reports/
+reports/coverage/*
 .env
 .env.backup
 .phpunit.result.cache

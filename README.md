@@ -109,6 +109,11 @@ php artisan key:generate
 php artisan serve
 ```
 
+Minitoring with Telescope
+
+Open brower at: http://localhost:8000/telescope
+
+
 ## Docs
 
 Full Gudeline Documentaion
