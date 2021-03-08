@@ -9,7 +9,6 @@
     "license": "MIT",
     "require": {
         "php": "^7.3",
-        "alphabotics/laravel-redis-manager": "dev-master",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -17,9 +16,12 @@
         "laravel/cashier": "^12.6",
         "laravel/dusk": "^6.9",
         "laravel/framework": "^8.1.0",
-        "laravel/horizon": "^5.6",
+        "laravel/horizon": "^5.7",
         "laravel/jetstream": "^1.1",
+        "laravel/passport": "10.0.0",
         "laravel/sanctum": "^2.6",
+        "laravel/socialite": "^5.2",
+        "laravel/telescope": "^4.4",
         "laravel/tinker": "^2.0",
         "predis/predis": "^1.1"
     },
@@ -66,10 +68,5 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "repositories": [
-    {
-        "type": "path",
-        "url": "../laravel-redis-manager"
-    }
-    ]
+    "repositories": []
 }
